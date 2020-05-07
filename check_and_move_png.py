@@ -21,11 +21,10 @@ for d, dirs, files in os.walk(os.getcwd() + path_to_png_dir):
             if width < 256:
                 if height < 256:
                     res = '/result'
-                    c = d
                     new_path = d + res
                     if not os.path.exists(new_path):
                         os.mkdir(new_path)
-                        
+
                     print(f'Файл {path} перемещен')
                     shutil.move(path, new_path)
 
